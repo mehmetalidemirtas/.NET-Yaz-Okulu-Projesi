@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.Master.cs" Inherits="YazOkuluProjesi.MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yaz Okulu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Giris.aspx">Yaz Okulu Ders Kayıt</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="OgrenciListesi.aspx">Öğrenciler
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="OgrenciListesi.aspx">Öğrenci Listesi</a></li>        
+          <li><a href="Default.aspx">Yeni Öğrenci Kayıt</a></li>        
+        </ul>
+      </li>
+
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="Ogretmenler.aspx">Öğretmenler
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="Ogretmenler.aspx">Öğretmen Listesi</li>
+          <li><a href="OgretmenEkle.aspx">Yeni Öğretmen Kayıt</a></li>        
+        </ul>
+      </li>
+
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="DersListesi.aspx">Dersler
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="DersListesi.aspx">Ders Listesi</a></li>  
+          <li><a href="DersEkle.aspx">Yeni Ders Ekle</a></li>        
+        </ul>
+      </li>  
+        
+      <li><a href="DersTalepListesi.aspx">Ders Talep Listesi</a></li> 
+      <li><a href="Cikis.aspx">Çıkış Yap</a></li>      
+    </ul>
+  </div>
+</nav>
+  <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
